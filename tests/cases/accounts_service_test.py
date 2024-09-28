@@ -1,7 +1,6 @@
 import random
 import re
-from unittest import TestCase
-from unittest.mock import patch
+from unittest import TestCase, main
 
 from app.dto.bank_account import BankAccount
 from app.services.accounts_service import AccountsService
@@ -59,3 +58,7 @@ class AccountServiceTest(TestCase):
         account_service = AccountsService()
         result = account_service.get_account_by_iban(TEST_IBAN)
         self.assertIsNone(result)
+
+
+if __name__ == '__main__':
+    main()
